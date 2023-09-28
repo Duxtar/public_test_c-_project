@@ -8,15 +8,25 @@
 using namespace std;
 
 void starter(int &path){
+    int i=0;
     cout << "1.School" << endl
     << "2.Work" << endl
     << "3.Toilet" << endl;
     cin >> path;
+    while (path==0) {
+        i++;
+        if (path==0 and i==1) {
+            cout << "The number, input a number";
+        }
+        if (path==0 and i==2) {
+            cout << "I don't understand, are you dumb or something?";
+        }
+    }
 }
 
 int main() {
     string mainname;
-    int path;
+    int path=0;
     string asses[]={
         "ass","a$$","ASS","Ass","aSS","a55","assy","Assy","asshole","Asshole","a55hole","asses","butthole","Butthole","Asslover","asslover","assfan","Assfan","assesfor100","Assesfor100","assholeeater","Asseater","asseater","Assholeeater"
 
@@ -32,17 +42,18 @@ int main() {
 
     for (int i = 0; i <= size(asses); i++ ){
         if (asses[i]==mainname){
-            cout << "Well, that's an ass name i guess";
+            cout << "Well, that's an ass name i guess" << endl;
             break;
         }
         if (dicks[i]==mainname){
             cout << (dicks[i]==mainname) << mainname;
-            cout << "Well, you can just say that your name is Dick";
+            cout << "Well, you can just say that your name is Dick" << endl;
             break;
         }
     }
     cout << "Choose your starting point:" << endl;
     starter(path);
+    cout << path;
 }
 
 
